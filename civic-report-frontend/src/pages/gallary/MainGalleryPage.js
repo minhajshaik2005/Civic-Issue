@@ -28,7 +28,7 @@ export default function MainGalleryPage() {
       setError("");
 
       const res = await axios.get(
-        "http://13.201.16.142:5000/api/gallary/public"
+        "/api/gallary/public"
       );
 
       setGalleries(res.data.galleries || []);
