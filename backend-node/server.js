@@ -23,98 +23,98 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 /* ================= AUTH / LOGIN ================= */
 
-const loginRoutes = require("./routes/login");
-app.use("/api/login", loginRoutes);
+const loginRoutes = require("http://13.201.16.142:5000./routes/login");
+app.use("http://13.201.16.142:5000/api/login", loginRoutes);
 // Handles login, JWT generation, authentication
 
 /* ================= OTP AUTH ================= */
 
-const phoneOtpRoutes = require("./routes/auth/phoneOtp");
+const phoneOtpRoutes = require("http://13.201.16.142:5000./routes/auth/phoneOtp");
 app.use("/api/auth", phoneOtpRoutes);
 // Handles phone OTP verification APIs
 
 /* ================= ADMIN DASHBOARD ================= */
 
-const dashboardRoute = require("./routes/admin/dashboard");
+const dashboardRoute = require("http://13.201.16.142:5000./routes/admin/dashboard");
 app.use("/api/admin/dashboard", dashboardRoute);
 // Admin dashboard statistics & summary APIs
 
 /* ================= CONTACT FORM ================= */
 
-const contactPageRoutes = require("./routes/contact/contactpage");
+const contactPageRoutes = require("http://13.201.16.142:5000./routes/contact/contactpage");
 app.use("/api/contact", contactPageRoutes);
 // Public contact-us form submission APIs
 
 /* ================= ADMIN → MIDDLE ADMINS ================= */
 
-const middleAdminsRouter = require("./routes/admin/middleadmins/middleAdmins");
-const viewMiddleAdminsListRouter = require("./routes/admin/middleadmins/viewMiddleAdminsList");
-const editMiddleAdminRouter = require("./routes/admin/middleadmins/editMiddleAdmin");
-const blockDeleteMiddleAdminRouter = require("./routes/admin/middleadmins/blockDeleteMiddleAdmin");
+const middleAdminsRouter = require("http://13.201.16.142:5000./routes/admin/middleadmins/middleAdmins");
+const viewMiddleAdminsListRouter = require("http://13.201.16.142:5000./routes/admin/middleadmins/viewMiddleAdminsList");
+const editMiddleAdminRouter = require("http://13.201.16.142:5000./routes/admin/middleadmins/editMiddleAdmin");
+const blockDeleteMiddleAdminRouter = require("http://13.201.16.142:5000./routes/admin/middleadmins/blockDeleteMiddleAdmin");
 
-app.use("/api/admin/middle-admins", middleAdminsRouter);
+app.use("http://13.201.16.142:5000/api/admin/middle-admins", middleAdminsRouter);
 // Create middle admins
 
-app.use("/api/admin/middle-admins", viewMiddleAdminsListRouter);
+app.use("http://13.201.16.142:5000/api/admin/middle-admins", viewMiddleAdminsListRouter);
 // View middle admin list
 
-app.use("/api/admin/middle-admins", editMiddleAdminRouter);
+app.use("http://13.201.16.142:5000/api/admin/middle-admins", editMiddleAdminRouter);
 // Edit middle admin details
 
-app.use("/api/admin/middle-admins", blockDeleteMiddleAdminRouter);
+app.use("http://13.201.16.142:5000/api/admin/middle-admins", blockDeleteMiddleAdminRouter);
 // Block or delete middle admins
 
 /* ================= ADMIN → OFFICERS ================= */
 
-const addOfficerRouter = require("./routes/admin/officers/addOfficer");
-const listOfficersRouter = require("./routes/admin/officers/listOfficers");
-const manageOfficersRouter = require("./routes/admin/officers/manageOfficers");
-const editOfficerRouter = require("./routes/admin/officers/editOfficer");
+const addOfficerRouter = require("http://13.201.16.142:5000./routes/admin/officers/addOfficer");
+const listOfficersRouter = require("http://13.201.16.142:5000./routes/admin/officers/listOfficers");
+const manageOfficersRouter = require("http://13.201.16.142:5000./routes/admin/officers/manageOfficers");
+const editOfficerRouter = require("http://13.201.16.142:5000./routes/admin/officers/editOfficer");
 
-app.use("/api/admin/officers", addOfficerRouter);
+app.use("http://13.201.16.142:5000/api/admin/officers", addOfficerRouter);
 // Add new officers
 
-app.use("/api/admin/officers", listOfficersRouter);
+app.use("http://13.201.16.142:5000/api/admin/officers", listOfficersRouter);
 // List all officers
 
-app.use("/api/admin/officers", manageOfficersRouter);
+app.use("http://13.201.16.142:5000/api/admin/officers", manageOfficersRouter);
 // Activate / deactivate / manage officers
 
-app.use("/api/admin/officers", editOfficerRouter);
+app.use("http://13.201.16.142:5000/api/admin/officers", editOfficerRouter);
 // Edit officer details
 
 /* ================= ADMIN → USERS ================= */
 
-const listUsersRouter = require("./routes/admin/users/listUsers");
-const blockUsersRouter = require("./routes/admin/users/blockUsers");
+const listUsersRouter = require("http://13.201.16.142:5000./routes/admin/users/listUsers");
+const blockUsersRouter = require("http://13.201.16.142:5000./routes/admin/users/blockUsers");
 
-app.use("/api/admin/users", listUsersRouter);
+app.use("http://13.201.16.142:5000/api/admin/users", listUsersRouter);
 // List all users
 
-app.use("/api/admin/users", blockUsersRouter);
+app.use("http://13.201.16.142:5000/api/admin/users", blockUsersRouter);
 // Block or unblock users
 
 /* ================= ADMIN → ISSUES ================= */
 
-const adminIssuesRoutes = require("./routes/admin/issues/issueslist");
-const issuesRouter = require("./routes/admin/issues/issuesDetails");
+const adminIssuesRoutes = require("http://13.201.16.142:5000./routes/admin/issues/issueslist");
+const issuesRouter = require("http://13.201.16.142:5000./routes/admin/issues/issuesDetails");
 
-app.use("/api/admin/issues", adminIssuesRoutes);
+app.use("http://13.201.16.142:5000/api/admin/issues", adminIssuesRoutes);
 // List reported issues
 
-app.use("/api/admin/issues", issuesRouter);
+app.use("http://13.201.16.142:5000/api/admin/issues", issuesRouter);
 // View issue details
 
 /* ================= CITIZEN ISSUE REPORT ================= */
 
-const reportIssuesRoutes = require("./routes/reportIssues");
-app.use("/api/issues", reportIssuesRoutes);
+const reportIssuesRoutes = require("http://13.201.16.142:5000./routes/reportIssues");
+app.use("http://13.201.16.142:5000/api/issues", reportIssuesRoutes);
 // Citizens report civic issues
 
 /* ================= ADMIN → REPORTS ================= */
 
-const issuesReportRouter = require("./routes/admin/reports/issuesReport");
-const issuesReportDownloadRouter = require("./routes/admin/reports/issuesReportDownload");
+const issuesReportRouter = require("http://13.201.16.142:5000./routes/admin/reports/issuesReport");
+const issuesReportDownloadRouter = require("http://13.201.16.142:5000./routes/admin/reports/issuesReportDownload");
 const topAreasReportRouter = require("./routes/admin/reports/topAreasReport");
 const areaDetailsReportRouter = require("./routes/admin/reports/areaDetailsReport");
 const officerPerformanceRouter = require("./routes/admin/reports/officerPerformance");
@@ -173,13 +173,13 @@ app.use("/api/officer/settings", officerSecurityRoutes);
 /* ================= OFFICER GALLERY ================= */
 
 const officerGalleryRoutes = require("./routes/officer/gallary/uploadimages");
-app.use("/api/officer/gallary", officerGalleryRoutes);
+app.use("http://13.201.16.142:5000/api/officer/gallary", officerGalleryRoutes);
 // Officer gallery: upload, list, delete (PRIVATE)
 
 /* ================= PUBLIC GALLERY ================= */
 
 const publicGalleryRoutes = require("./routes/gallary/gallerypublic");
-app.use("/api/gallary/public", publicGalleryRoutes);
+app.use("http://13.201.16.142:5000/api/gallary/public", publicGalleryRoutes);
 
 // Public read-only gallery APIs
 
@@ -294,5 +294,5 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`✅ Backend running at http://localhost:${PORT}`);
+  console.log(`✅ Backend running at http://13.201.16.142:${PORT}`);
 });
